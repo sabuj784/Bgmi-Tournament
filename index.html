@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUBG Tournament</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>BGMI TOURNAMENT</h1>
+        <img src="WhatsApp Image 2024-05-30 at 20.42.20_bf1db20e.jpg" alt="PUBG Logo" class="logo">
+    </header>
+    <div id="registration-page" class="form-page">
+        <h1>Register</h1>
+        <form id="registration-form">
+            <label for="reg-username">Username:</label>
+            <input type="text" id="reg-username" name="username" required>
+            <label for="reg-password">Password:</label>
+            <input type="password" id="reg-password" name="password" required>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+    <div id="login-page" class="form-page" style="display: none;">
+        <h1>Login</h1>
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>>
+    <div id="main-content" style="display: none;">
+        <header>
+            <nav>
+                <a href="#" onclick="showSection('pubg')">PUBG</a>
+                <a href="#" onclick="showSection('freefire')">Freefire</a>
+            </nav>
+        </header>
+        <div class="content">
+            <img src="pc-image.jpg" alt="PC Image" class="pc-image">
+            <button onclick="showMaps()">BGMI</button>
+        </div>
+        <div id="map-selection" style="display: none;">
+            <h2>Select Map</h2>
+            <button onclick="showMapForm('erangel')">Erangel</button>
+            <button onclick="showMapForm('miramar')">Miramar</button>
+            <button onclick="showMapForm('sanhok')">Sanhok</button>
+        </div>
+        <div id="erangel-form" class="map-form" style="display: none;">
+            <h3>Erangel</h3>
+            <form id="erangel-team-form">
+                <label for="erangel-team">Team Name:</label>
+                <input type="text" id="erangel-team" name="erangel-team">
+                <label for="erangel-player">Player Name:</label>
+                <input type="text" id="erangel-player" name="erangel-player">
+                <label for="erangel-image">Player Image:</label>
+                <input type="file" id="erangel-image" name="erangel-image" accept="image/*">
+                <button type="button" onclick="addPlayer('erangel')">Register Player</button>
+            </form>
+            <ul id="erangel-list"></ul>
+        </div>
+        <div id="miramar-form" class="map-form" style="display: none;">
+            <h3>Miramar</h3>
+            <form id="miramar-team-form">
+                <label for="miramar-team">Team Name:</label>
+                <input type="text" id="miramar-team" name="miramar-team">
+                <label for="miramar-player">Player Name:</label>
+                <input type="text" id="miramar-player" name="miramar-player">
+                <label for="miramar-image">Player Image:</label>
+                <input type="file" id="miramar-image" name="miramar-image" accept="image/*">
+                <button type="button" onclick="addPlayer('miramar')">Register Player</button>
+            </form>
+            <ul id="miramar-list"></ul>
+        </div>
+        <div id="sanhok-form" class="map-form" style="display: none;">
+            <h3>Sanhok</h3>
+            <form id="sanhok-team-form">
+                <label for="sanhok-team">Team Name:</label>
+                <input type="text" id="sanhok-team" name="sanhok-team">
+                <label for="sanhok-player">Player Name:</label>
+                <input type="text" id="sanhok-player" name="sanhok-player">
+                <label for="sanhok-image">Player Image:</label>
+                <input type="file" id="sanhok-image" name="sanhok-image" accept="image/*">
+                <button type="button" onclick="addPlayer('sanhok')">Register Player</button>
+            </form>
+            <ul id="sanhok-list"></ul>
+        </div>
+    </div>
+    <script src="pubg.js"></script>
+</body>
+</html>
